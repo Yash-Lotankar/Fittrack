@@ -32,6 +32,11 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'FitTrack API is running', timestamp: new Date() });
 });
 
+// Root route (MOVE HERE 👇)
+app.get('/', (req, res) => {
+  res.send('FitTrack API is running 🚀');
+});
+
 // Error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -42,6 +47,7 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => {
   console.log(`🚀 FitTrack API running on port ${PORT}`);
 });
