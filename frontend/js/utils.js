@@ -1,6 +1,5 @@
 // ===== CONFIG =====
-const API_BASE = 'http://localhost:5000/api';
-
+const API_URL = "https://fittrack-backend-ilp8.onrender.com/api";
 // ===== API HELPER =====
 const api = {
   async request(method, endpoint, data = null) {
