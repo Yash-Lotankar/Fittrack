@@ -11,7 +11,7 @@ const api = {
     if (token) opts.headers['Authorization'] = `Bearer ${token}`;
     if (data) opts.body = JSON.stringify(data);
     try {
-      const res = await fetch(`${API_BASE}${endpoint}`, opts);
+      const res = await fetch(`${API_URL}${endpoint}`, opts);
       const json = await res.json();
       if (!res.ok) throw new Error(json.message || 'Request failed');
       return json;
